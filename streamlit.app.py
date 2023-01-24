@@ -6,7 +6,7 @@ from urllib.error import URLError
 
 streamlit.title('My Parents New Healthy Diner')
 
-import streamlit
+#import streamlit
 
 streamlit.header('Breakfast Favourites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -38,7 +38,7 @@ try:
       fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
       streamlit.dataframe(fruityvice_normalized)
      
-except URlError as e:
+except URLError as e:
   streamlit.error()
 
 streamlit.stop()
